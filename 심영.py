@@ -1,5 +1,6 @@
 import asyncio
 import discord
+import os
 
 app = discord.Client()
 
@@ -43,5 +44,5 @@ async def on_message(message):
         await message.channel.send(embed=embed)               
 
 
-            
+access.token = os.environ["BOT_TOKEN"]           
 app.run(token)
